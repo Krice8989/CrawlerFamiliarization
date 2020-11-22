@@ -9,7 +9,6 @@ namespace CrawlerFamiliarization
         private List<Uri> _frontier = new List<Uri>();
         private HtmlWeb _web = new HtmlWeb();
         private HtmlDocument _doc;
-
         public void Crawl()
         {
             BuildInitialFrontier();

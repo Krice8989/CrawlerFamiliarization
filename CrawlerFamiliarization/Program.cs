@@ -6,8 +6,8 @@ namespace CrawlerFamiliarization
     {
         static void Main()
         {
-            HtmlAgility htmlAgility = new HtmlAgility();
-            htmlAgility.Crawl();
+            WikiCrawler wc = new WikiCrawler();
+            wc.crawl();
         }
     }
 }
