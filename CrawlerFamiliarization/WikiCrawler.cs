@@ -38,7 +38,6 @@ namespace CrawlerFamiliarization
 
                     if (NodeVerification(node))
                     {
-                        Console.WriteLine($"{node.Attributes["href"].Value.ToString()} passed");
                         _front.Add(PathMerger(node.Attributes["href"].Value));
                     }
                 }
@@ -74,6 +73,7 @@ namespace CrawlerFamiliarization
                 }
                 return false;
             }
+
             private bool NotDuplicateVerification(string Target)
             {
                 if (_front.Contains(PathMerger(Target)))
@@ -82,6 +82,7 @@ namespace CrawlerFamiliarization
                 }
                 return true;
             }
+             
             private Uri PathMerger(string TailEnd)
             {
                 Uri output = new Uri("https://en.wikipedia.org" + TailEnd);
